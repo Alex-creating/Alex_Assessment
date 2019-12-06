@@ -5,10 +5,11 @@ import java.util.Scanner;
 
 public class Main {
 
-	public void startGame() {
+	public Boolean startGame() {
 		
 		Scanner scan = new Scanner(System.in);
 		Compass startCompass = new Compass();
+		PlayAgain doYouWantToPlayAgain = new PlayAgain();
 		Movement yourXChanges = new Movement();
 		Movement yourYChanges = new Movement();
 		Pythagoras pythag = new Pythagoras();
@@ -84,8 +85,19 @@ public class Main {
 		System.out.println();
 		System.out.println("You have found the treasure! A golden chest sits before you, dulled by the years of decay.");
 		System.out.println("You unhinge the locks and pry it open to find:");
-		System.out.println("A book, Java for Dummies. Was the journey worth it?");
-		scan.close();
-	}
+		System.out.println("A book, Java for Dummies. What does it mean?");
+		
+		String playAgain = doYouWantToPlayAgain.playAgain(scan);
+			
+			if (playAgain.equals("Play")) {
+				return true;
+			}
+			else {
+				return false;
+			}
+		
+		
+	
 
+}
 }

@@ -4,43 +4,53 @@ import java.text.DecimalFormat;
 
 public class EasterEggs {
 	
-	public void easterEggMessages(int X, int Y, int theirX, int theirY) {
+	public void easterEggMessages(int x, int y, int theirX, int theirY) {
 		
+		OutOfBounds tooFarX = new OutOfBounds();
+		OutOfBounds tooFarY = new OutOfBounds();
 		Pythagoras pythag = new Pythagoras();
 		DecimalFormat df = new DecimalFormat("#.##");
 		
-	if (X == 7 && Y == 5) {
+	if (x == 7 && y == 5) {
 		System.out.println("You stumble over some branches and scrap your knee.");
 	}
-	if (X == 8 && Y == 7) {
+	if (x == 8 && y == 7) {
 		System.out.println("You hear wolves howling in the distance, you'd better hurry.");
 	}
-	if (X == 9 && Y == 8) {
+	if (x == 9 && y == 8) {
 		System.out.println("A strong wind blows through the tall grass, you feel like you are being watched.");
 	}
-	if (X == 4 && Y == 4) {
+	if (x == 4 && y == 4) {
 		System.out.println("Bear prints extend off to the left, best to move quietly.");
 	}
-	if (X == 2 && Y == 7) {
+	if (x== 2 && y == 7) {
 		System.out.println("An owl flies past, almost swiping you with its talons.");
 	}
-	if (X == 7 && Y == 3) {
+	if (x == 7 && y == 3) {
 		System.out.println("You stumble over some branches and scrap your knee.");
 	}
-	if (X == 8 && Y == 4) {
+	if (x == 8 && y == 4) {
 		System.out.println("You hear wolves howling in the distance, you'd better hurry.");
 	}
-	if (X == 4 && Y == 6) {
+	if (x == 4 && y == 6) {
 		System.out.println("A strong wind blows through the tall grass, you feel like you are being watched.");
 	}
-	if (X == 3 && Y == 4) {
+	if (x == 3 && y == 4) {
 		System.out.println("Bear prints extend off to the left, best to move quietly.");
 	}
-	if (X == 6 && Y == 5) {
+	if (x == 6 && y == 5) {
 		System.out.println("An owl flies past, almost swiping you with its talons.");
+	}
+	if (x == 0 || y==0) {
+		System.out.println("You feel danger around you, you are close to a border and you should turn back.");
+	}
+	if (x == 10 || y==10) {
+		System.out.println("You feel danger around you, you are close to a border and you should turn back.");
 	}
 	
-	System.out.println();
+		System.out.println();	
+	}
+
 
 }
-}
+

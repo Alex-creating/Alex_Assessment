@@ -86,6 +86,7 @@ public class Main {
 		System.out.println("You have found the treasure! A golden chest sits before you, dulled by the years of decay.");
 		System.out.println("You unhinge the locks and pry it open to find:");
 		System.out.println("A book, Java for Dummies. What does it mean?");
+		System.out.println();
 		
 		String playAgain = doYouWantToPlayAgain.playAgain(scan);
 			
@@ -93,6 +94,7 @@ public class Main {
 				return true;
 			}
 			else {
+				scan.close();
 				return false;
 			}
 		
